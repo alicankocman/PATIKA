@@ -1,0 +1,93 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+//hesapla fonksiyonu
+function hesapla(urunAdet)
+{
+    toplam=0;
+    for(i=1;i<=urunAdet;i++){
+        miktar=parseFloat(document.getElementById("miktar"+i).value);
+        fiyat=parseFloat(document.getElementById("fiyat"+i).value);
+        tutar=miktar*fiyat;
+        document.getElementById('tutar'+i).value=tutar;
+        toplam+=miktar*fiyat;
+ } 
+ document.getElementById('geneltoplam').value=toplam;
+}
+</script>
+ 
+</head>
+<body background="https://www.nasihatler.com/wp-content/uploads/2019/09/Nasihatler-arkaplan-resimleri-127.jpg">
+  <center><h1>SATIN ALMA SAYFASINA HOŞGELDİNİZ...</h1></center>  <br>
+  <center><h2>Key Anahtarınız İle Birlikte İstedikleriniz Sipariş Veriniz...</h2></center><br><br>
+<table border="1" align="center">
+<tr>
+<td>Ürün Adı</td>
+<td>Miktar</td>
+<td>Fiyat</td>
+<td>Tutar</td>
+</tr>
+<tr>
+<td>SOSİSLİ</td>
+<td><input type="text" id="miktar1" value="0"></td>
+<td><input type="text" id="fiyat1" value="10" readonly="false"></td>
+<td><input type="text" id="tutar1" value="" readonly="false"></td>
+</tr>
+<tr>
+<td>HAMBURGER</td>
+<td><input type="text" id="miktar2" value="0"></td>
+<td><input type="text" id="fiyat2" value="35" readonly="false"></td>
+<td><input type="text" id="tutar2" value="" readonly="false"></td>
+</tr>
+<tr>
+<td>PİZZA</td>
+<td><input type="text" id="miktar3" value="0"></td>
+<td><input type="text" id="fiyat3" value="45" readonly="false"></td>
+<td><input type="text" id="tutar3" value="" readonly="false"></td>
+</tr>
+<tr>
+    <td>KEK</td>
+    <td><input type="text" id="miktar4" value="0" ></td>
+    <td><input type="text" id="fiyat4" value="11" readonly="false"></td>
+    <td><input type="text" id="tutar4" value="" readonly="false"></td>
+    </tr>
+    <tr>
+        <td>LAHMACUN</td>
+        <td><input type="text" id="miktar5" value="0" ></td>
+        <td><input type="text" id="fiyat5" value="11" readonly="false"></td>
+        <td><input type="text" id="tutar5" value="" readonly="false"></td>
+        </tr><tr>
+            <td>ADANA KEBAP</td>
+            <td><input type="text" id="miktar6" value="0" ></td>
+            <td><input type="text" id="fiyat6" value="26" readonly="false"></td>
+            <td><input type="text" id="tutar6" value="" readonly="false"></td>
+            </tr><tr>
+                <td>PİDE</td>
+                <td><input type="text" id="miktar7" value="0"></td>
+                <td><input type="text" id="fiyat7" value="13" readonly="false"></td>
+                <td><input type="text" id="tutar7" value="" readonly="false"></td>
+                </tr><tr>
+                    <td>ÇİĞKÖFTE</td>
+                    <td><input type="text" id="miktar8" value="0" ></td>
+                    <td><input type="text" id="fiyat8" value="22" readonly="false"></td>
+                    <td><input type="text" id="tutar8" value="" readonly="false"></td>
+                    </tr>
+<tr>
+<td align="right" colspan="3">Genel TOPLAM:</td>
+<td><input type="text" readonly="true" id="geneltoplam" name="total" readonly="false"></td>
+</tr>
+<tr>
+    <td colspan="4" align="right"><button onclick="hesapla(8)">Hesapla</button></td>
+</tr>
+</table>
+</form><br><br><br><center>
+<form action="sel.php" method="POST">
+  Almak İstediklerinizi Lütfen Yazınız<input type="text" name="istenilens"><br>
+Key Anahtarınızı Lütfen Giriniz.......<input type="text" name="keys"><br><br>
+    <input type="submit" value="Sipariş Ver" onclick="yemekoncesi()">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" onclick="window.location.href = 'index.html'" value="ANASAYFA">
+</form>
+</center>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+<!DOCTYPE HTML>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
+    <meta charset="utf-8">
+
+	<title>Untitled 1</title>
+
+<script language="javascript">
+function ali(a,b){
+  if(a=="admin"&&b=="123"){
+   document.write("Hoşgeldiniz ByAdmin Admin sayfasına yönlendirilmek <a href='yoneticigirisi.html'>tıklayın</a> ");
+
+  }
+  else{
+    alert ("HATALI GIRIS LUTFEN TEKRAR DENEYINIZ...");
+  }
+      
+       
+}
+   
+</script>
+<style>
+  .button {
+
+display: inline-block;
+
+padding: 15px 25px;
+
+font-size: 24px;
+
+cursor: pointer;
+
+text-align: center;
+
+text-decoration: none;
+
+outline: none;
+
+color: #fff;
+
+background-color:#f4511e;
+
+border: none;
+
+border-radius: 15px;
+
+box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+
+background-color: #3e8e41;
+
+box-shadow: 0 5px #666;
+
+transform: translateY(4px);
+}
+</style>
+</head>
+<body background="https://www.nasihatler.com/wp-content/uploads/2019/09/Nasihatler-arkaplan-resimleri-127.jpg">
+   <center><h1>YÖNETİCİ GİRİŞİNE HOŞGELDİN</h1></center>
+<form>
+    <center><br><br><br><br><br>
+ YÖNETİCİ ADI<input type="text" name="a"><br /><br /><br><br><br>
+PASSWORD<input type="text" name="b"></br><br><br><br>
+<input type="button" class="button" value="GİRİŞ" onclick="ali(a.value,b.value)">
+</center>
+</form>
+
+</body>
+</html>
